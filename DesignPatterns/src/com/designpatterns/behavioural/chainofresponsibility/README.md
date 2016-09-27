@@ -9,21 +9,20 @@
 #### Client :  Initiates the request to a  Concrete Handler object in chain
 
 #### Handler: 
-... Defines an interface for handling request
-... Implements successor link (optional)
+* Defines an interface for handling request
+* Implements successor link (optional)
 
 #### Concrete Handler: 
-... * Handles requests it is responsible for.
-... * Can access its successor
-... * If Concrete handler can handle the request , it does so; otherwise it forwards the request to its successor.
+* Handles requests it is responsible for.
+* Can access its successor
+* If Concrete handler can handle the request , it does so; otherwise it forwards the request to its successor.
 
 ### Applicability
 
 #### When to use
 
-	* You want to issue a request to one of several object without specifying the receiver exactly ( Decouple sender of request from receiver or handler of request)
-
-	* The set of objects that can handle request need to be specified dynamically.
+** You want to issue a request to one of several object without specifying the receiver exactly ( Decouple sender of request from receiver or handler of request)
+** The set of objects that can handle request need to be specified dynamically.
 
 ### Consequences
 
@@ -42,16 +41,16 @@ Since a request has no explicit receiver, there is no guarantee that it'll be ha
 
 	In case if there are no pre-existing links for defining the chain, we'll have to introduce them ourselves.   In this case Handler not only defines  interface for requests, but also provides the default implementation that forwards the request to successor .  If the ConcreteHandler subclass is not interested in the request, it doesn't have to override the forwarding operation.
 
-* Representing request:
+* Representing request:<br/>
 	There are different options available for representing request
-** Each request is a hardcoded operation invocation.  
-		Advantage : Convenience and safe.
-		Disadvantage : We can forward only fixed set of requests that Handler defines.
-** Use handler function that takes request code as parameter.
-**** Advantage : Supports open-ended set of requests.
-**** Disadvantage: 
-**** Sender and Receiver agree on how the request should be encoded.  
-**** Requires conditional statements for dispatching the request based on code
-**** There is no type-safe way to pass parameter. 
-**** Use separate request objects for each request to bundle request parameters.  A request class can represent request explicitly, and new kinds of requests can be defined by sub classing the Request class.  Subclass can define different parameters.  Each Handler must know the kind of request to which it can handle.   To identify the request, Request can define an accessor function that returns an identifier for the class.  Alternatively, the receiver can use RTTI (Runtime Type Identification) , if the implementation language supports it.
++ Each request is a hardcoded operation invocation.  
+	* Advantage : Convenience and safe.
+	* Disadvantage : We can forward only fixed set of requests that Handler defines.
++ Use handler function that takes request code as parameter.
+	* Advantage : Supports open-ended set of requests.
+	* Disadvantage: 
+		* Sender and Receiver agree on how the request should be encoded.  
+		* Requires conditional statements for dispatching the request based on code
+		* There is no type-safe way to pass parameter. 
+		* Use separate request objects for each request to bundle request parameters.  A request class can represent request explicitly, and new kinds of requests can be defined by sub classing the Request class.  Subclass can define different parameters.  Each Handler must know the kind of request to which it can handle.   To identify the request, Request can define an accessor function that returns an identifier for the class.  Alternatively, the receiver can use RTTI (Runtime Type Identification) , if the implementation language supports it.
 
