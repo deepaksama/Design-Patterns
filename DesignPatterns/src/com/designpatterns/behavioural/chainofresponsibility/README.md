@@ -7,23 +7,23 @@
 ![Chain Of Responsibility UML Diagram](https://github.com/deepaksama/Images/blob/master/DesignPatterns/chain_of_responsibility.png)  
 
 #### **Client** :  
-	* Initiates the request to a  Concrete Handler object in chain
+* Initiates the request to a  Concrete Handler object in chain
 
 #### **Handler**: 
-	* Defines an interface for handling request
-	* Implements successor link (optional)
+* Defines an interface for handling request
+* Implements successor link (optional)
 
 #### **Concrete Handler:**
-	* Handles requests it is responsible for.
-	* Can access its successor
-	* If Concrete handler can handle the request , it does so; otherwise it forwards the request to its successor.
+* Handles requests it is responsible for.
+* Can access its successor
+* If Concrete handler can handle the request , it does so; otherwise it forwards the request to its successor.
 
 ### Applicability
 
 #### When to use
 
-** You want to issue a request to one of several object without specifying the receiver exactly ( Decouple sender of request from receiver or handler of request)
-** The set of objects that can handle request need to be specified dynamically.
+* You want to issue a request to one of several object without specifying the receiver exactly ( Decouple sender of request from receiver or handler of request)
+* The set of objects that can handle request need to be specified dynamically.
 
 ### Consequences
 
