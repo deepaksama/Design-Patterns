@@ -1,10 +1,8 @@
 # Chain Of Responsibility Design Pattern
 
-# Chain of Responsibility Pattern
-
 ### Intent
 
-	Avoid coupling the sender of a request to its receiver by giving morethan on objects a chance to handle the request.  Chain the receiving object and pass the request along the chain until an object handles it.
+... Avoid coupling the sender of a request to its receiver by giving morethan on objects a chance to handle the request.  Chain the receiving object and pass the request along the chain until an object handles it.
 
 ### UML Diagram
 ![Chain Of Responsibility UML Diagram](https://github.com/deepaksama/Images/blob/master/DesignPatterns/chain_of_responsibility.png)  
@@ -12,13 +10,13 @@
 #### Client :  Initiates the request to a  Concrete Handler object in chain
 
 #### Handler: 
-	* Defines an interface for handling request
-	* Implements successor link (optional)
+... Defines an interface for handling request
+... Implements successor link (optional)
 
 #### Concrete Handler: 
-	* Handles requests it is responsible for.
-	* Can access its successor
-	* If Concrete handler can handle the request , it does so; otherwise it forwards the request to its successor.
+... * Handles requests it is responsible for.
+... * Can access its successor
+... * If Concrete handler can handle the request , it does so; otherwise it forwards the request to its successor.
 
 ### Applicability
 
