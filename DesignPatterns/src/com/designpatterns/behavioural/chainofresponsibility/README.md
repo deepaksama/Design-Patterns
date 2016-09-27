@@ -1,1 +1,1 @@
-# Chain Of Responsibility
+# Chain Of Responsibility Design Pattern
