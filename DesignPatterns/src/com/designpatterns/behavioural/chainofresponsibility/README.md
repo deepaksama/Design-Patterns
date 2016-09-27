@@ -1,8 +1,7 @@
 # Chain Of Responsibility Design Pattern
 
 ### Intent
-
-...Avoid coupling the sender of a request to its receiver by giving morethan on objects a chance to handle the request.  Chain the receiving object and pass the request along the chain until an object handles it.
+>	Avoid coupling the sender of a request to its receiver by giving morethan on objects a chance to handle the request.  Chain the receiving object and pass the request along the chain until an object handles it.
 
 ### UML Diagram
 ![Chain Of Responsibility UML Diagram](https://github.com/deepaksama/Images/blob/master/DesignPatterns/chain_of_responsibility.png)  
