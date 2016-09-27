@@ -6,16 +6,17 @@
 ### UML Diagram
 ![Chain Of Responsibility UML Diagram](https://github.com/deepaksama/Images/blob/master/DesignPatterns/chain_of_responsibility.png)  
 
-#### Client :  Initiates the request to a  Concrete Handler object in chain
+#### **Client** :  
+	* Initiates the request to a  Concrete Handler object in chain
 
-#### Handler: 
-* Defines an interface for handling request
-* Implements successor link (optional)
+#### **Handler**: 
+	* Defines an interface for handling request
+	* Implements successor link (optional)
 
-#### Concrete Handler: 
-* Handles requests it is responsible for.
-* Can access its successor
-* If Concrete handler can handle the request , it does so; otherwise it forwards the request to its successor.
+#### **Concrete Handler:**
+	* Handles requests it is responsible for.
+	* Can access its successor
+	* If Concrete handler can handle the request , it does so; otherwise it forwards the request to its successor.
 
 ### Applicability
 
