@@ -10,7 +10,7 @@
 
 ### [Behavioral](Behavioral)
 
-* [ChainOfResponsibilities](Design-Patterns/DesignPatterns/src/com/designpatterns/behavioural/chainofresponsibility/) 
+* [ChainOfResponsibilities](DesignPatterns/src/com/designpatterns/behavioural/chainofresponsibility/) 
 * [Interpreter]
 * [Iterator](Behavioral/Iterator) 
 * [Mediator](Behavioral/Mediator) 
